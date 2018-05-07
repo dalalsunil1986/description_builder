@@ -1,23 +1,23 @@
-<div class="container-sm">
-  <div>No: <%= @description.no %></div>
+<div class="container-lg">
+  <div><b>No:</b> <%= @description.no %></div>
 
-  <div>Title: <%= @description.title %></div>
+  <div><b>Title:</b> <%= @description.title %></div>
 
-  <div>Youtube ID: <%= @description.youtube_id %></div>
+  <div><b>Youtube ID:</b> <%= @description.youtube_id %></div>
 
-  <div>Youtube embed url: https://www.youtube.com/embed/<%= @description.youtube_id %></div>
+  <div><b>Embed url:</b> https://www.youtube.com/embed/<%= @description.youtube_id %></div>
 
-  <p>HTML</p>
+  <p><b>HTML</b></p>
   <textarea rows=20><%= render partial: 'html', locals: {
     description: @description
   } %></textarea>
 
-  <p>Text</p>
+  <p><b>Text</b></p>
   <textarea rows=20><%= render partial: 'text', locals: {
     description: @description
   } %></textarea>
 
   <div>
-    <%= link_to "edit", edit_description_path(@description) %>
+    <b><%= link_to "edit", edit_description_path(@description) %></b>
   </div>
 </div>
