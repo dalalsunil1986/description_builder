@@ -1,0 +1,11 @@
+<textarea rows=20><%= render partial: 'html', locals: {
+  description: @description
+} %></textarea>
+
+<textarea rows=20><%= render partial: 'text', locals: {
+  description: @description
+} %></textarea>
+
+<div>
+  <%= link_to "edit", edit_description_path(@description) %>
+</div>

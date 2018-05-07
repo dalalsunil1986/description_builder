@@ -1,0 +1,24 @@
+<%= description.description %>
+
+The code for this episode is on github: <%= description.repo_url %>
+
+
+❤‍ Help keep ReactU free by donating to the project:
+---------------------------------------------------
+▶ Bitcoin: 1LxbzzxogbJrxT8d7e2CpnxQRezpzSJejq
+▶ Bitcoin cash: 12kK8yqdQ2gxiyFCsu4yjwqTq4uMr6h5Tm
+▶ Ethereum: 0xB09F0B62d2BbB6B59B898EF707916B5c93D682B4
+▶ Monero: 491TrYo4iAEbRLkDhXtQ98arUZKoKnvm33bS8gK67oZjBe7sXczT9jSZKZpqYVDKYvZwFCTQuG5mgGLoHF3xaRPi92Gtko8
+
+
+❤‍ Screencast info
+-----------------
+▶ Length: <%= description.length %> minutes
+▶ Skill level: <%= description.skill_level %>
+
+
+❤‍ What you will learn
+---------------------
+<%= description.skill_list.split("\n").map do |line|
+  raw "▶ #{line}"
+end.join %>
