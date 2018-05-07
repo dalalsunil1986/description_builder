@@ -1,21 +1,23 @@
-<table>
+<div class="container-lg">
+  <table>
+    <tr>
+      <td>No.</td>
+      <td>Title</td>
+      <td>ReactU</td>
+      <td>Youtube</td>
+    </tr>
+  <% @descriptions.each do |d| %>
   <tr>
-    <td>No.</td>
-    <td>Title</td>
-    <td>ReactU</td>
-    <td>Youtube</td>
+    <td><%= link_to d.no, d %></td>
+    <td><%= d.title %></td>
+    <td><%= link_to "view", "https://reactu.io/screencasts/#{d.no}" %></td>
+    <td>
+      <%= link_to "view", "https://www.youtube.com/watch?v=#{d.youtube_id}" %> |
+      <%= link_to "edit", "https://www.youtube.com/edit?o=U&video_id=#{d.youtube_id}" %>
+    </td>
   </tr>
-<% @descriptions.each do |d| %>
-<tr>
-  <td><%= link_to d.no, d %></td>
-  <td><%= d.title %></td>
-  <td><%= link_to "view", "https://reactu.io/screencasts/#{d.no}" %></td>
-  <td>
-    <%= link_to "view", "https://www.youtube.com/watch?v=#{d.youtube_id}" %> |
-    <%= link_to "edit", "https://www.youtube.com/edit?o=U&video_id=#{d.youtube_id}" %>
-  </td>
-</tr>
-<% end %>
-</table>
+  <% end %>
+  </table>
 
-<%= link_to 'new', new_description_path %>
+  <%= link_to 'new', new_description_path %>
+</div>
