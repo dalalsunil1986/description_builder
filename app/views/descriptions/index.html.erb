@@ -3,6 +3,8 @@
 <tr>
   <td><%= link_to d.no, d %></td>
   <td><%= link_to d.title, d %></td>
+  <td><%= link_to "reactu.io", "https://reactu.io/screencasts/#{d.no}" %></td>
+  <td><%= link_to "youtube", "https://www.youtube.com/watch?v=#{d.youtube_id}" %></td>
 </tr>
 <% end %>
 </table>
