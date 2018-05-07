@@ -36,7 +36,7 @@ class DescriptionsController < ApplicationController
   def description_params
     params.require(:description).permit(
       :no, :title, :description, :repo_url,
-      :length, :skill_level, :skill_list
+      :length, :skill_level, :skill_list, :youtube_id
     )
   end
   

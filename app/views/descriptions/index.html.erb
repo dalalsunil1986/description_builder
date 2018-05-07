@@ -1,10 +1,19 @@
 <table>
+  <tr>
+    <td>No.</td>
+    <td>Title</td>
+    <td>ReactU</td>
+    <td>Youtube</td>
+  </tr>
 <% @descriptions.each do |d| %>
 <tr>
   <td><%= link_to d.no, d %></td>
-  <td><%= link_to d.title, d %></td>
-  <td><%= link_to "reactu.io", "https://reactu.io/screencasts/#{d.no}" %></td>
-  <td><%= link_to "youtube", "https://www.youtube.com/watch?v=#{d.youtube_id}" %></td>
+  <td><%= d.title %></td>
+  <td><%= link_to "view", "https://reactu.io/screencasts/#{d.no}" %></td>
+  <td>
+    <%= link_to "view", "https://www.youtube.com/watch?v=#{d.youtube_id}" %> |
+    <%= link_to "edit", "https://www.youtube.com/edit?o=U&video_id=#{d.youtube_id}" %>
+  </td>
 </tr>
 <% end %>
 </table>
