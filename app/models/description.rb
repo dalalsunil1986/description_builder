@@ -3,5 +3,7 @@ class Description < ApplicationRecord
             :length, :skill_level, :skill_list, :youtube_id,
             presence: true
 
-  default_scope order("no desc")
+  default_scope -> {
+    order("no::integer desc")
+  }
 end
