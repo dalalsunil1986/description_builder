@@ -2,13 +2,7 @@
   raw("<p>#{line.gsub("\n", "")}</p>\n") if line.length > 2
 end.join %>
 
-<h4>Help keep ReactU free by donating to the project:</h4>
-<ul>
-  <li>Bitcoin: 1LxbzzxogbJrxT8d7e2CpnxQRezpzSJejq</li>
-  <li>Bitcoin cash: 12kK8yqdQ2gxiyFCsu4yjwqTq4uMr6h5Tm</li>
-  <li>Ethereum: 0xB09F0B62d2BbB6B59B898EF707916B5c93D682B4</li>
-  <li>Monero: 491TrYo4iAEbRLkDhXtQ98arUZKoKnvm33bS8gK67oZjBe7sXczT9jSZKZpqYVDKYvZwFCTQuG5mgGLoHF3xaRPi92Gtko8</li>
-</ul>
+<p>If you would like to vote on what I cover next, do so here! https://reactu.io/polls/newest</p>
 
 <p>The code for this episode <a href="<%= description.repo_url %>">is on github</a></p>
 
@@ -23,3 +17,10 @@ end.join %>
 <%= description.skill_list.split("\r").map do |line|
   raw("  <li>#{line.gsub("\n", "")}</li>\n") if line.length > 2
 end.join %></ul>
+
+<h4>Help keep ReactU free by donating to the project:</h4>
+<ul>
+  <li>Bitcoin: 1LxbzzxogbJrxT8d7e2CpnxQRezpzSJejq</li>
+  <li>Bitcoin cash: 12kK8yqdQ2gxiyFCsu4yjwqTq4uMr6h5Tm</li>
+  <li>Ethereum: 0xB09F0B62d2BbB6B59B898EF707916B5c93D682B4</li>
+</ul>

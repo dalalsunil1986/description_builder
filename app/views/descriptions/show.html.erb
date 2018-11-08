@@ -7,9 +7,6 @@
 
   <div><b>Embed url:</b> https://www.youtube.com/embed/<%= @description.youtube_id %></div>
 
-  <p><b>TOC</b></p>
-  <textarea rows=20><%= @description.branches %></textarea>
-
   <p><b>HTML</b></p>
   <textarea rows=20><%= render partial: 'html', locals: {
     description: @description
